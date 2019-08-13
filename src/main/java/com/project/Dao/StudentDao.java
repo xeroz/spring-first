@@ -4,7 +4,9 @@ import com.project.Entity.Student;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
+import org.springframework.stereotype.Repository;
 
+@Repository
 public class StudentDao {
     private static Map<Integer, Student> students;
 
@@ -19,6 +21,6 @@ public class StudentDao {
     }
 
     public Collection<Student> getAllStudent() {
-        return students.values();
+        return this.students.values();
     }
 }
